@@ -130,7 +130,6 @@ p {
 
 #form {
     /*background: linear-gradient(135deg, #e0c3fc, #8ec5fc);*/
-    background-image: url("imagenes/imagen5.JPG");
     display: flex;
     justify-content: center;
     background-color: #ffffff;
