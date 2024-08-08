@@ -97,7 +97,7 @@ const maxInvitadosPorAsistente = {
 'Milton Cepeda': 3,
 'Mónica Reyes': 2,
 'Orlando Benavides': 3,
-'Thomas Martinez': 4,p
+'Thomas Martinez': 4
 };
 
 function mostrarOpciones() {
