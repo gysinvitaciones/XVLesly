@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     // Configuración del contador regresivo para el evento
-    const eventDate = new Date('2024-09-01T18:00:00');
+    const eventDate = new Date('2024-09-01T19:00:00');
 
     function updateCountdown() {
         const now = new Date();
@@ -116,6 +116,7 @@ function mostrarInvitados(asistira) {
     var nombreSeleccionado = document.getElementById('nombre').value;
     var maxInvitados = maxInvitadosPorAsistente[nombreSeleccionado] || 0;
     var inputInvitados = document.getElementById('num_invitados');
+
     if (asistira) {
         invitados.classList.remove('hidden');
         inputInvitados.max = maxInvitados;
