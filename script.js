@@ -116,14 +116,17 @@ function mostrarInvitados(asistira) {
     var nombreSeleccionado = document.getElementById('nombre').value;
     var maxInvitados = maxInvitadosPorAsistente[nombreSeleccionado] || 0;
     var inputInvitados = document.getElementById('num_invitados');
-
+    var mensajePase = document.getElementById('mensajePase');
+    
     if (asistira) {
         invitados.classList.remove('hidden');
         inputInvitados.max = maxInvitados;
         inputInvitados.placeholder = `Máximo ${maxInvitados} invitados`;
+        mensajePase.textContent = `Tu pase es para ${maxInvitados} personas.`;
     } else {
         invitados.classList.add('hidden');
         inputInvitados.value = '';
+        mensajePase.textContent = '';
     }
 }
 
