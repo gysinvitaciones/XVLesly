@@ -60,8 +60,8 @@
         <h2>Confirmación de Asistencia</h2><br>
         <p>¡Me encantaría compartir este momento tan especial contigo!</p>
         <p>Por favor, confirma si contaré con tu presencia.</p><br>
-        <form id="confirmation-form" action="https://script.google.com/macros/s/AKfycbwGakZhoMcIaZTlfFTebLSnwxifyki8a64UY0HDAwh0OMO60rD9LYh0oH3I3lO9Pc3e/exec" method="post"> 
-            <label for="Nombre:">
+        <form id="confirmation-form""> 
+            <label for="nombre:">
                 <select name="nombre" id="nombre" required onchange="mostrarOpciones()">
                     <option value="Selecciona">Selecciona tu nombre</option>
                     <option value="Adan Salazar">Adan Salazar</option>
@@ -123,8 +123,7 @@
                     <option value="Ricardo Tavares">Ricardo Tavares</option>
                     <option value="Thomas Martinez">Thomas Martinez</option>
                 </select>
-            </label>
-            <br><br>
+            </label><br><br>
         
             <div id="opciones" class="hidden">
                 <label for="Confirmación de Asistencia"></label>
@@ -132,14 +131,14 @@
                 <button type="button" onclick="mostrarInvitados(false)" class="formbutton">No asistiré</button><br><br>
 
                 <div id="invitados" class="hidden">
-                    <input type="number" id="num_invitados" name="num_invitados" min="0" required><br>
+                    <input type="number" id="num_invitados" name="num_invitados" min="0" placeholder="Número de invitados"><br>
                 </div>
             </div>
 
             <button type="button" onclick="enviarWhatsApp()">Confirmar</button>
         </form>
-
     </section>
+    
     <section id="imagenes">
         <img src="imagenes/imagen4.JPG" alt="Imagen 4">
     </section>
