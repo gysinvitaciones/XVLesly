@@ -108,7 +108,6 @@ function mostrarOpciones() {
         opciones.classList.remove('hidden');
     } else {
         opciones.classList.add('hidden');
-        document.getElementById('invitados').classList.add('hidden');
     }
 }
 
@@ -117,7 +116,6 @@ function mostrarInvitados(asistira) {
     var nombreSeleccionado = document.getElementById('nombre').value;
     var maxInvitados = maxInvitadosPorAsistente[nombreSeleccionado] || 0;
     var inputInvitados = document.getElementById('num_invitados');
-    var mensaje = document.getElementById('mensaje-invitados');
     if (asistira) {
         invitados.classList.remove('hidden');
         inputInvitados.max = maxInvitados;
@@ -127,11 +125,6 @@ function mostrarInvitados(asistira) {
         inputInvitados.value = '';
     }
 }
-
-function actualizarMensaje() {
-    var numInvitados = document.getElementById('num_invitados').value || 0;
-    var mensaje = document.getElementById('mensaje-invitados');
-    mensaje.textContent = "Tu pase es para " + numInvitados + " personas";
 
 function enviarWhatsApp() {
     var nombre = document.getElementById('nombre').value;
