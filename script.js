@@ -104,11 +104,21 @@ const maxInvitadosPorAsistente = {
 function mostrarOpciones() {
     var nombreSeleccionado = document.getElementById('nombre').value;
     var opciones = document.getElementById('opciones');
-    if (nombreSeleccionado) {
+    var invitados = document.getElementById('invitados');
+    var inputInvitados = document.getElementById('num_invitados');
+    var mensajePase = document.getElementById('mensajePase');
+    var botonConfirmar = document.getElementById('confirmar-btn');
+    
+    if (nombreSeleccionado !== "Selecciona") {
         opciones.classList.remove('hidden');
     } else {
         opciones.classList.add('hidden');
     }
+    
+    invitados.classList.add('hidden');
+    inputInvitados.value = '';
+    mensajePase.textContent = '';
+    botonConfirmar.classList.add('hidden');
 }
 
 function mostrarInvitados(asistira) {
@@ -117,16 +127,19 @@ function mostrarInvitados(asistira) {
     var maxInvitados = maxInvitadosPorAsistente[nombreSeleccionado] || 0;
     var inputInvitados = document.getElementById('num_invitados');
     var mensajePase = document.getElementById('mensajePase');
+    var botonConfirmar = document.getElementById('confirmar-btn');
     
     if (asistira) {
         invitados.classList.remove('hidden');
         inputInvitados.max = maxInvitados;
         inputInvitados.placeholder = `Máximo ${maxInvitados} invitados`;
         mensajePase.textContent = `Tu pase es para ${maxInvitados} personas.`;
+        botonConfirmar.classList.remove('hidden');
     } else {
         invitados.classList.add('hidden');
         inputInvitados.value = '';
         mensajePase.textContent = '';
+        botonConfirmar.classList.remove('hidden');
     }
 }
 
